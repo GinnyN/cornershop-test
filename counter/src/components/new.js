@@ -9,7 +9,7 @@ const NewCounter = ({ onSubmit }) => {
 
   return (
     <React.Fragment>
-        {newForm ? <div className="form">
+        {newForm ? <div className="form" data-testid="newForm">
             <div className="input item1">
                 <input type="text" onChange={(e) => setName(e.target.value)}/>
             </div>
@@ -20,7 +20,7 @@ const NewCounter = ({ onSubmit }) => {
               <button onClick={() => onSubmit(name)} disabled={name.length === 0} className="submit"><FontAwesomeIcon icon={faCheck} /></button>
             </div>
         </div> :
-        <button onClick={() => showNewForm(!newForm)}><FontAwesomeIcon icon={faPlus} /></button> }
+        <button  data-testid="newButton" onClick={() => showNewForm(!newForm)}><FontAwesomeIcon icon={faPlus} /></button> }
     </React.Fragment>
   );
 }

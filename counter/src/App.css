@@ -132,3 +132,7 @@ input {
   grid-template-columns: 150px auto;
   text-align: left;
 }
+
+p {
+  margin: 5px;
+}

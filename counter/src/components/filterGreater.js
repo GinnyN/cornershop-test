@@ -13,8 +13,9 @@ const FilterGreater = ({ onClick }) => {
     }
   return (
     <div className="filter">
+        <p>Filtro por Mayor o Menor</p>
         <div className="input item1">
-            <input type="number" onChange={(e) => setTextSearch(e.target.value)}/>
+            <input type="number"  data-testid="inputNumber" onChange={(e) => setTextSearch(e.target.value)}/>
         </div>
         <div className="item2">
             <button className="submit" onClick={innerOnClick}><FontAwesomeIcon icon={greater ? faLessThan : faGreaterThan} /></button>
